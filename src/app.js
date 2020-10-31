@@ -14,7 +14,7 @@ export default function App() {
       </Jumbotron.Pane>
     </Jumbotron>
   ));
-  console.log(jumbotrons)
+  
   return (
     <Jumbotron.Container>
       {jumbotrons}
