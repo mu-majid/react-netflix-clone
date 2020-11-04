@@ -14,8 +14,6 @@ export function FaqsContainer() {
           </Accordion.Item>
         ))}
       </Accordion.Frame>
-
-
     </Accordion>
   );
 }
