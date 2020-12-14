@@ -19,12 +19,6 @@ Accordion.Frame = function AccordionFrame({ children, ...restProps }) {
   return <Frame {...restProps}>{children}</Frame>;
 };
 
-Accordion.Body = function FooterBody({ children, ...restProps }) {
-  const {toggleShow} = useContext(ToggleContext);
-
-  return toggleShow ? <Body {...restProps}>{children}</Body> : null;
-}
-
 Accordion.Item = function FooterItem({ children, ...restProps }) {
   const [toggleShow, setToggleShow] = useState(false);
   return (
@@ -32,6 +26,12 @@ Accordion.Item = function FooterItem({ children, ...restProps }) {
       <Item {...restProps}>{children}</Item>;
     </ToggleContext.Provider>
   );
+}
+
+Accordion.Body = function FooterBody({ children, ...restProps }) {
+  const {toggleShow} = useContext(ToggleContext);
+
+  return toggleShow ? <Body {...restProps}>{children}</Body> : null;
 }
 
 Accordion.Header = function FooterHeader({ children, ...restProps }) {
